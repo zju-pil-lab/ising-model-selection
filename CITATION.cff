@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this implementation or its reference results, please cite the paper below."
+title: "Ising Model Selection: Replica Theory and Numerical Reproduction"
+type: software
+authors:
+  - family-names: Meng
+    given-names: Xiangming
+version: 1.0.0
+date-released: 2026-09-15
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Ising Model Selection Using ℓ₁-Regularized Linear Regression: A Statistical Mechanics Analysis"
+  authors:
+    - family-names: Meng
+      given-names: Xiangming
+    - family-names: Obuchi
+      given-names: Tomoyuki
+    - family-names: Kabashima
+      given-names: Yoshiyuki
+  year: 2021
+  collection-title: "Advances in Neural Information Processing Systems"
+  volume: 34
+  url: "https://proceedings.neurips.cc/paper_files/paper/2021/hash/31917677a66c6eddd3ab1f68b0679e2f-Abstract.html"

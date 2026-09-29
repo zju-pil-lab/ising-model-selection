@@ -1,0 +1,24 @@
+{
+  "test_returncode": 0,
+  "tests": 7,
+  "points": 32,
+  "max_eos_log_relative_residual": 2.6847413181125143e-11,
+  "max_local_kkt_residual": 2.6353530468981035e-11,
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "platform": "macOS-14.2.1-arm64-arm-64bit-Mach-O",
+  "source_sha256": {
+    "replica.py": "1e6d8f7b6ff61cdb9f227bdbe1bf063bf0c361c8e17a0a5fadb8858e005a7b20",
+    "logistic.cpp": "4c0d02ec31d500bbafaf9156b2c09acf456bbb7e7e7bb9316b407d60ab1bb2a9",
+    "run_figure2.py": "6b23b523e97d881c45cafff532de249b462244a065566fa289b9c0577bc026c2",
+    "plot_results.py": "24029d97dab7fff55a6ccfdf42ba0897497abb04c0e82ed2ee2009c23007bf6f",
+    "test_replica.py": "6202a89a4b02db2db76cbfe201853b13a3de0f8600858b844eaf7836c9ad592e"
+  },
+  "notes": [
+    "Residuals are numerical equation/optimizer errors, not differences from the published plot.",
+    "Theory-only finite-size Monte Carlo. No full-graph Ising data or high-dimensional regression.",
+    "See README for H-update inconsistencies, grid tree approximation, and precision aggregation.",
+    "MC errors in CSV are conditional on the shared fitted order parameters."
+  ]
+}

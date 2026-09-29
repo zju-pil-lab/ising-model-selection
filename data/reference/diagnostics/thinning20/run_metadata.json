@@ -1,0 +1,17 @@
+{
+  "repeats_per_point": 64,
+  "graphs": [
+    "rr",
+    "grid"
+  ],
+  "points": 32,
+  "total_fits": 2048,
+  "status": "complete",
+  "completed_repeats": 128,
+  "wall_seconds_this_invocation": 0.061056166999833295,
+  "workers": 4,
+  "loaded_repeats": 128,
+  "numerical_support_tolerance": 1e-08,
+  "max_kkt": 1.998943510717055e-10,
+  "comparison_note": "Same graph and sample pool shared across alpha points; independent repeats within each point. LinR/LogR paired on identical datasets."
+}

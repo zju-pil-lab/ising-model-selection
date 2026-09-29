@@ -1,0 +1,85 @@
+{
+  "unit_tests": 14,
+  "unit_tests_exit_code": 0,
+  "main": {
+    "checkpoints": 2000,
+    "fits": 32000,
+    "support_disagreements_1e10_to_1e6": 5,
+    "max_mean_metric_change_with_support_threshold": 0.0003333333333333334,
+    "support_threshold_changes": [
+      {
+        "graph": "grid",
+        "loss": "lin",
+        "alpha": 0.2,
+        "threshold": 1e-06,
+        "metric": "precision",
+        "mean_change": 7.89473684210526e-06
+      },
+      {
+        "graph": "grid",
+        "loss": "log",
+        "alpha": 1.0,
+        "threshold": 1e-06,
+        "metric": "precision",
+        "mean_change": 2.197802197802201e-05
+      },
+      {
+        "graph": "rr",
+        "loss": "lin",
+        "alpha": 0.2,
+        "threshold": 1e-06,
+        "metric": "precision",
+        "mean_change": 4.7619047619047614e-05
+      },
+      {
+        "graph": "rr",
+        "loss": "lin",
+        "alpha": 0.4,
+        "threshold": 1e-10,
+        "metric": "precision",
+        "mean_change": -0.0003333333333333334
+      },
+      {
+        "graph": "rr",
+        "loss": "log",
+        "alpha": 0.4,
+        "threshold": 1e-10,
+        "metric": "precision",
+        "mean_change": -0.0003333333333333334
+      }
+    ],
+    "max_metric_reconstruction_error": 0,
+    "max_independently_recomputed_kkt": 1.9592000244372798e-10,
+    "max_center_coefficient": 0,
+    "rr_mean_coupling_sign": 0.0002933333333333333
+  },
+  "thinning": {
+    "checkpoints": 128,
+    "fits": 2048,
+    "support_disagreements_1e10_to_1e6": 0,
+    "max_mean_metric_change_with_support_threshold": 0.0,
+    "support_threshold_changes": [],
+    "max_metric_reconstruction_error": 0,
+    "max_independently_recomputed_kkt": 1.9913737325794045e-10,
+    "max_center_coefficient": 0,
+    "rr_mean_coupling_sign": 0.008229166666666666
+  },
+  "max_stored_kkt": 1.9990759048127416e-10,
+  "thinning_max_abs_z": 2.6362862476846143,
+  "thinning_comparisons": 96,
+  "source_sha256": {
+    "experiment_native.cpp": "bbba552cbb61b700504a1e3d421bba7f6260723fbf83cd2f7d73545edd610a88",
+    "experiments.py": "28830a40393ff60dbc14d9ee6d576f8b7299ce6bb68f1a5bedfbc8c209366267",
+    "run_experiments.py": "d50d1c394592375fe5b7f8a129179aa2b39a35d61c4c5e3ca8f6cf6d6a18aec6",
+    "test_experiments.py": "ff201d5dc88dc4c8573b77617cedae6e4bb6e0b3e879a7cf10e38a6a9b61d8a9",
+    "audit_sampling.py": "bbe349233bc3158306dfa9cf257ba85176022f2133924010efaf88197b6c3682",
+    "plot_experiments.py": "c15a1b68b70946cd705161a15f293c8283446d68709a9b62cc6786d5882f1df2",
+    "validate_experiments.py": "425179db821be4ff490be0f10d400dd574d88bf2cf183240f86ce178bf646e70"
+  },
+  "limitations": [
+    "Finite Ising MCMC samples are approximately iid, not mathematically independent.",
+    "Alpha points share graph/pool; repetitions within each point are independent.",
+    "A 64-repeat paired thinning audit has limited power; no multiple-testing significance claim is made.",
+    "Differences from replica theory include finite-size/loop approximations, not just simulation error."
+  ]
+}

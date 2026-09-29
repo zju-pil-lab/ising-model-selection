@@ -1,0 +1,22 @@
+{
+  "description": "Reimplemented in 2026 from the 2021 paper. Reference results are the validated independent reproduction, not recovered 2021 output.",
+  "source_archive_sha256": "1c41ac37aceb6b019e1595ba31452bbb95f44cc91d69a8025374da3ef7a3157c",
+  "original_numerical_source_sha256": {
+    "replica.py": "1e6d8f7b6ff61cdb9f227bdbe1bf063bf0c361c8e17a0a5fadb8858e005a7b20",
+    "logistic.cpp": "4c0d02ec31d500bbafaf9156b2c09acf456bbb7e7e7bb9316b407d60ab1bb2a9",
+    "experiments.py": "28830a40393ff60dbc14d9ee6d576f8b7299ce6bb68f1a5bedfbc8c209366267",
+    "experiment_native.cpp": "bbba552cbb61b700504a1e3d421bba7f6260723fbf83cd2f7d73545edd610a88"
+  },
+  "paper": "https://proceedings.neurips.cc/paper_files/paper/2021/file/31917677a66c6eddd3ab1f68b0679e2f-Paper.pdf",
+  "packaging_changes": {
+    "numerical_python_core": "Formatting only; AST equivalence checked against original solver sources.",
+    "numerical_cpp_core": "Formatting only; verified identical after removing comments and whitespace.",
+    "entrypoints": "Paths, CLI validation, preview labeling, and release tooling changed; reference data were not regenerated."
+  },
+  "packaged_numerical_source_sha256": {
+    "replica.py": "570f7abd127656c2eded3fee44febb184031b1f813c30075a9b80defaf2505ff",
+    "experiments.py": "3f5f245e181879a6e2b5827a43d85ac57d05da89f62d6539a26e34ee2089b97f",
+    "logistic.cpp": "bf5dc6a211a4f57af6237ebd76b07cf877aca15bfc0e40a2eacab4be402a20bf",
+    "experiment_native.cpp": "4c7e5298fd4b86486c7bbe15462a407c8146a4f2e2179fbf884f3ad688f9dfa3"
+  }
+}

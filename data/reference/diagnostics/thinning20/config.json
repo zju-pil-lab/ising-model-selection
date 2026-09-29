@@ -1,0 +1,37 @@
+{
+  "seed": 20260915,
+  "burn": 100000,
+  "gap": 20,
+  "pool_factor": 5,
+  "alphas": [
+    0.2,
+    0.4,
+    0.8,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "settings": {
+    "rr": {
+      "N": 200,
+      "d": 3,
+      "coupling": 0.4,
+      "lam": 0.3
+    },
+    "grid": {
+      "N": 225,
+      "d": 4,
+      "coupling": 0.2,
+      "lam": 0.15
+    }
+  },
+  "source_sha256": {
+    "experiments.py": "28830a40393ff60dbc14d9ee6d576f8b7299ce6bb68f1a5bedfbc8c209366267",
+    "experiment_native.cpp": "bbba552cbb61b700504a1e3d421bba7f6260723fbf83cd2f7d73545edd610a88"
+  },
+  "solver_target_kkt": 2e-10,
+  "solver_acceptance_kkt": 2e-10,
+  "solver_polishing": "active KKT root with global inactive checks"
+}

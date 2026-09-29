@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.dll
+.mplconfig/
+.ruff_cache/
+.DS_Store
+outputs/
+dist/
+*.zip
+*.tmp.npz

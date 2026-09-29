@@ -1,0 +1,43 @@
+name: Numerical checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: python reproduce.py check
+      - run: python tools/verify_reference.py
+      - run: python reproduce.py plot
+      - name: Fresh sampler and both full-dimensional estimators
+        run: python reproduce.py experiments --quick --workers 2
+      - name: Fresh replica solutions for both graphs and losses
+        run: python run_figure2.py --mc-linear 64 --mc-logistic 32 --alphas 0.4 --out outputs/ci-theory

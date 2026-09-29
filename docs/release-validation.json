@@ -1,0 +1,151 @@
+{
+  "date": "2026-09-15",
+  "python": "3.13.7",
+  "platform": "macOS-14.2.1-arm64-arm-64bit-Mach-O",
+  "source": "Clean extraction of the source ZIP, without prebuilt native libraries.",
+  "archive_inventory_and_hashes": "passed",
+  "checks": [
+    {
+      "name": "full_reference_audit",
+      "exit_code": 0
+    },
+    {
+      "name": "public_interface_tests",
+      "exit_code": 0
+    },
+    {
+      "name": "plot_reference",
+      "exit_code": 0
+    },
+    {
+      "name": "fresh_full_workflow_smoke",
+      "exit_code": 0
+    }
+  ],
+  "github_ci": "Configured for Linux/macOS and Python 3.11/3.13; remote jobs have not been run.",
+  "reference_and_source_files_unchanged_after_workflows": true,
+  "numerical_audit": {
+    "unit_tests": 14,
+    "unit_tests_exit_code": 0,
+    "main": {
+      "checkpoints": 2000,
+      "fits": 32000,
+      "support_disagreements_1e10_to_1e6": 5,
+      "max_mean_metric_change_with_support_threshold": 0.0003333333333333334,
+      "support_threshold_changes": [
+        {
+          "graph": "grid",
+          "loss": "lin",
+          "alpha": 0.2,
+          "threshold": 1e-06,
+          "metric": "precision",
+          "mean_change": 7.89473684210526e-06
+        },
+        {
+          "graph": "grid",
+          "loss": "log",
+          "alpha": 1.0,
+          "threshold": 1e-06,
+          "metric": "precision",
+          "mean_change": 2.197802197802201e-05
+        },
+        {
+          "graph": "rr",
+          "loss": "lin",
+          "alpha": 0.2,
+          "threshold": 1e-06,
+          "metric": "precision",
+          "mean_change": 4.7619047619047614e-05
+        },
+        {
+          "graph": "rr",
+          "loss": "lin",
+          "alpha": 0.4,
+          "threshold": 1e-10,
+          "metric": "precision",
+          "mean_change": -0.0003333333333333334
+        },
+        {
+          "graph": "rr",
+          "loss": "log",
+          "alpha": 0.4,
+          "threshold": 1e-10,
+          "metric": "precision",
+          "mean_change": -0.0003333333333333334
+        }
+      ],
+      "max_metric_reconstruction_error": 0,
+      "max_independently_recomputed_kkt": 1.9592000244372798e-10,
+      "max_center_coefficient": 0,
+      "rr_mean_coupling_sign": 0.0002933333333333333
+    },
+    "thinning": {
+      "checkpoints": 128,
+      "fits": 2048,
+      "support_disagreements_1e10_to_1e6": 0,
+      "max_mean_metric_change_with_support_threshold": 0.0,
+      "support_threshold_changes": [],
+      "max_metric_reconstruction_error": 0,
+      "max_independently_recomputed_kkt": 1.9913737325794045e-10,
+      "max_center_coefficient": 0,
+      "rr_mean_coupling_sign": 0.008229166666666666
+    },
+    "max_stored_kkt": 1.9990759048127416e-10,
+    "thinning_max_abs_z": 2.6362862476846143,
+    "thinning_comparisons": 96,
+    "source_sha256": {
+      "experiment_native.cpp": "4c7e5298fd4b86486c7bbe15462a407c8146a4f2e2179fbf884f3ad688f9dfa3",
+      "experiments.py": "3f5f245e181879a6e2b5827a43d85ac57d05da89f62d6539a26e34ee2089b97f",
+      "run_experiments.py": "b74b951c80833e7fe024cf98e81c11d414e52d82f1f070cdbeba925a1765e935",
+      "test_experiments.py": "239def932949321ccb56a734e9492272665fc2c7bcad5e69f67e053b05ae1cc8",
+      "audit_sampling.py": "1d2090ffba734ab208b9fe6710f62475f89b1f17ef7547eb29a74bd01b31a66a",
+      "plot_experiments.py": "a4bc6fcc205f3d92b54751c4e103e220e6643dc1d0ca0b30ab0d82306aa4f61a",
+      "validate_experiments.py": "51d3bfa513164dcc7e239cb7e078048ab34a0a29ca0d096dddae59b6fa9d1542"
+    },
+    "limitations": [
+      "Finite Ising MCMC samples are approximately iid, not mathematically independent.",
+      "Alpha points share graph/pool; repetitions within each point are independent.",
+      "A 64-repeat paired thinning audit has limited power; no multiple-testing significance claim is made.",
+      "Differences from replica theory include finite-size/loop approximations, not just simulation error."
+    ]
+  },
+  "fresh_quick_run": {
+    "repeats_per_point": 3,
+    "graphs": [
+      "rr",
+      "grid"
+    ],
+    "points": 32,
+    "total_fits": 96,
+    "status": "complete",
+    "completed_repeats": 6,
+    "workers": 2,
+    "loaded_repeats": 0,
+    "numerical_support_tolerance": 1e-08,
+    "max_kkt": 1.998181620166406e-10,
+    "comparison_note": "Same graph and sample pool shared across alpha points; independent repeats within each point. LinR/LogR paired on identical datasets."
+  },
+  "tested_source_sha256": {
+    "audit_sampling.py": "1d2090ffba734ab208b9fe6710f62475f89b1f17ef7547eb29a74bd01b31a66a",
+    "experiment_native.cpp": "4c7e5298fd4b86486c7bbe15462a407c8146a4f2e2179fbf884f3ad688f9dfa3",
+    "experiments.py": "3f5f245e181879a6e2b5827a43d85ac57d05da89f62d6539a26e34ee2089b97f",
+    "logistic.cpp": "bf5dc6a211a4f57af6237ebd76b07cf877aca15bfc0e40a2eacab4be402a20bf",
+    "output_paths.py": "463452d6f6b6d98cf0260dfe3f8e181b83a87076d0023d32c5ad874a6d462e2f",
+    "plot_experiments.py": "a4bc6fcc205f3d92b54751c4e103e220e6643dc1d0ca0b30ab0d82306aa4f61a",
+    "plot_results.py": "566d61ec2dd850f5fcbcfd0babafc5d1ddc28388ef25c4fdfd836eac0393155e",
+    "replica.py": "570f7abd127656c2eded3fee44febb184031b1f813c30075a9b80defaf2505ff",
+    "reproduce.py": "c3e0ccdc1eaad3b22c63d51f6663a3f0db262516891bb6ddffffd56096f1f503",
+    "run_experiments.py": "b74b951c80833e7fe024cf98e81c11d414e52d82f1f070cdbeba925a1765e935",
+    "run_figure2.py": "d9411111e9359b453466835331eb1884cc2496206a5cd8fbf7ae3a7368100836",
+    "test_experiments.py": "239def932949321ccb56a734e9492272665fc2c7bcad5e69f67e053b05ae1cc8",
+    "test_public_interface.py": "4c6a165c1c768de4fafeb7b0936ae7b3e5c40e5175513ff6bfda0c6c2cc5efd9",
+    "test_replica.py": "5511e9a1db59a6b0c9b0cdb138da53b556477bda7e2141c440efc03fa6a47fcb",
+    "tools/package_release.py": "df1b24928d5185d3c68c5c83d6a93034e8e82e5ea935a6f544d9715e563267a2",
+    "tools/verify_reference.py": "e31a1f0341998bab5fa14ad86d726882cf8f407aa2353b9f0cde4931357e38bb",
+    "validate_experiments.py": "51d3bfa513164dcc7e239cb7e078048ab34a0a29ca0d096dddae59b6fa9d1542"
+  },
+  "ruff_check_and_format": "passed",
+  "citation_cff_schema_1_2_0": "passed",
+  "workflow_yaml_parse": "passed",
+  "private_path_and_credential_pattern_scan": "no matches in distributed text files"
+}
